@@ -1,0 +1,28 @@
+<section class="shop">
+    <h1>Our products</h1>
+    <div class="shop-products">
+
+        <div class="shop-list">
+            <% data.forEach(product => { %>
+                <div class="product">
+                    <a href="/product/<%= product._id %>">
+                        <img src="<%= product.img %>" alt="" class="pro-img">
+                        <p class="title"><%= product.title %></p>
+                        <p class="description"><%= product.body %></p>
+                        <p id="pricetag">
+                            <img src="https://cdn-icons-png.flaticon.com/128/9375/9375840.png" alt="">
+                            <span class="dis-price"><%= product.discountPrice %></span>
+                            <span class="act-price"><%= product.price %></span>
+                        </p>
+                        <div class="addToCart">
+                            <img src="https://cdn-icons-png.flaticon.com/128/7640/7640571.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+
+     
+
+</section>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Blogs</title>
+  <!-- <link rel="stylesheet" href="style1.css"> -->
+  <style>
+    *{
+    margin: 0;
+}
+.login{
+    background-image: url(images/bg3.jpg);
+    height: 100vh;
+    display: grid;
+    align-content: center;
+    background-size:cover;
+    justify-content: center;
+    gap: 20px;
+}
+form{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+input{
+    height: 3rem;
+    width:25rem;
+    border: 1px solid black;
+    background-color: white;
+    font-size: 20px;
+}
+
+.l1 p{
+    color: rgb(154, 42, 51);
+    font-size: 50px;
+}
+.l1{
+    margin-left: 100px;
+}
+button{
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.new_account a{
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    position: relative;
+    left: 100px;
+    top: 50px;
+}
+@media screen and (max-width:572px) {
+    input{
+        width: 20rem;
+    }
+    .new_account a{
+        left: 50px;
+    }
+}
+  </style>
+</head>
+<body>
+  <div class="login">
+    <div class="l1">
+      <p>Sign In</p>
+    </div>
+    <form action="/login" method="post">
+      <input type="email" placeholder="Username" id="username" name="email"/ required>
+      <input type="password" placeholder="Password" id="password" name="password"/ required>
+      <button type="submit">Login</button>
+    </form>
+    <div class="new_account">
+      <a href="/signup">Create new account</a>
+    </div>
+  </div>
+</body>
+</html>
